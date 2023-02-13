@@ -8,4 +8,3 @@ interface SwitchProps extends FieldProps {
 }
 export declare const Switch: React.FC<SwitchProps>;
 export {};
-//# sourceMappingURL=index.d.ts.map

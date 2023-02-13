@@ -5,4 +5,3 @@ interface HelperText extends FieldProps {
 }
 export declare const HelperText: React.FC<HelperText>;
 export {};
-//# sourceMappingURL=index.d.ts.map

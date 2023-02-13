@@ -9,4 +9,3 @@ interface TextFieldsProps extends FieldProps {
 }
 export declare const TextField: React.FC<TextFieldsProps>;
 export {};
-//# sourceMappingURL=index.d.ts.map

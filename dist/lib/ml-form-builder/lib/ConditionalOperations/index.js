@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getConditionalProps = void 0;
-var lodash_1 = require("lodash");
-var compare = function (value1, operator, value2) {
+import { get, forEach, isEmpty } from "lodash";
+const compare = (value1, operator, value2) => {
     switch (operator) {
         case ">":
             return value1 > value2;
@@ -24,15 +21,14 @@ var compare = function (value1, operator, value2) {
             return false;
     }
 };
-var getConditionalOutput = function (itemCondition, formikProps) {
-    var itemValue = (0, lodash_1.get)(formikProps, "values.".concat(itemCondition.key));
+const getConditionalOutput = (itemCondition, formikProps) => {
+    const itemValue = get(formikProps, `values.${itemCondition.key}`);
     return compare(itemValue, itemCondition.operator, itemCondition.compareValue);
 };
-var hasTruthyValue = function (logicalOperation, values, formikProps) {
-    if (logicalOperation === void 0) { logicalOperation = "AND"; }
-    var outputResult = false;
-    (0, lodash_1.forEach)(values, function (item, index) {
-        var result = getConditionalOutput(item, formikProps);
+const hasTruthyValue = (logicalOperation = "AND", values, formikProps) => {
+    let outputResult = false;
+    forEach(values, (item, index) => {
+        const result = getConditionalOutput(item, formikProps);
         if (logicalOperation === "AND" && !result) {
             outputResult = false;
             return false;
@@ -48,12 +44,12 @@ var hasTruthyValue = function (logicalOperation, values, formikProps) {
     });
     return outputResult;
 };
-var getConditionalProps = function (itemConfig, formikProps) {
-    var conditionInstructions = itemConfig.condition;
-    if (!conditionInstructions || (0, lodash_1.isEmpty)(conditionInstructions.values)) {
+export const getConditionalProps = (itemConfig, formikProps) => {
+    const conditionInstructions = itemConfig.condition;
+    if (!conditionInstructions || isEmpty(conditionInstructions.values)) {
         return { finalProps: {} };
     }
-    var isValidCondition = hasTruthyValue(conditionInstructions.logicOpn, conditionInstructions.values || [], formikProps);
+    const isValidCondition = hasTruthyValue(conditionInstructions.logicOpn, conditionInstructions.values || [], formikProps);
     //console.log('Conditional props valid condition', isValidCondition);
     if (isValidCondition) {
         /*
@@ -68,5 +64,4 @@ var getConditionalProps = function (itemConfig, formikProps) {
             return { finalProps: conditionInstructions.defaultProps };
     }
 };
-exports.getConditionalProps = getConditionalProps;
 //# sourceMappingURL=index.js.map

@@ -13,4 +13,3 @@ export interface PhoneFieldsProps extends FieldProps {
     fieldProps?: PhoneFieldProps;
 }
 export declare const PhoneField: React.FC<PhoneFieldsProps>;
-//# sourceMappingURL=index.d.ts.map

@@ -12,7 +12,7 @@ export declare const getMenuOptions: <T extends unknown>(options: MenuOptions<T>
 } | {
     (...items: ConcatArray<MenuOptionObject<T>>[]): MenuOptionObject<T>[];
     (...items: (MenuOptionObject<T> | ConcatArray<MenuOptionObject<T>>)[]): MenuOptionObject<T>[];
-} | ((searchElement: string, fromIndex?: number | undefined) => number) | ((searchElement: MenuOptionObject<T>, fromIndex?: number | undefined) => number) | ((searchElement: string, fromIndex?: number | undefined) => boolean) | ((searchElement: MenuOptionObject<T>, fromIndex?: number | undefined) => boolean) | ((index: number) => string | undefined) | ((index: number) => MenuOptionObject<T> | undefined) | ((...items: string[]) => number) | ((...items: MenuOptionObject<T>[]) => number) | ((separator?: string | undefined) => string) | ((compareFn?: ((a: string, b: string) => number) | undefined) => string[]) | ((compareFn?: ((a: MenuOptionObject<T>, b: MenuOptionObject<T>) => number) | undefined) => MenuOptionObject<T>[]) | ((callbackfn: (value: string, index: number, array: string[]) => void, thisArg?: any) => void) | ((callbackfn: (value: MenuOptionObject<T>, index: number, array: MenuOptionObject<T>[]) => void, thisArg?: any) => void) | {
+} | ((searchElement: string, fromIndex?: number | undefined) => number) | ((searchElement: MenuOptionObject<T>, fromIndex?: number | undefined) => number) | ((searchElement: string, fromIndex?: number | undefined) => boolean) | ((searchElement: MenuOptionObject<T>, fromIndex?: number | undefined) => boolean) | ((index: number) => string | undefined) | ((index: number) => MenuOptionObject<T> | undefined) | ((separator?: string | undefined) => string) | ((callbackfn: (value: string, index: number, array: string[]) => void, thisArg?: any) => void) | ((callbackfn: (value: MenuOptionObject<T>, index: number, array: MenuOptionObject<T>[]) => void, thisArg?: any) => void) | {
     (callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string): string;
     (callbackfn: (previousValue: string, currentValue: string, currentIndex: number, array: string[]) => string, initialValue: string): string;
     <U>(callbackfn: (previousValue: U, currentValue: string, currentIndex: number, array: string[]) => U, initialValue: U): U;
@@ -20,7 +20,7 @@ export declare const getMenuOptions: <T extends unknown>(options: MenuOptions<T>
     (callbackfn: (previousValue: MenuOptionObject<T>, currentValue: MenuOptionObject<T>, currentIndex: number, array: MenuOptionObject<T>[]) => MenuOptionObject<T>): MenuOptionObject<T>;
     (callbackfn: (previousValue: MenuOptionObject<T>, currentValue: MenuOptionObject<T>, currentIndex: number, array: MenuOptionObject<T>[]) => MenuOptionObject<T>, initialValue: MenuOptionObject<T>): MenuOptionObject<T>;
     <U_1>(callbackfn: (previousValue: U_1, currentValue: MenuOptionObject<T>, currentIndex: number, array: MenuOptionObject<T>[]) => U_1, initialValue: U_1): U_1;
-} | ((value: string, start?: number | undefined, end?: number | undefined) => string[]) | ((value: MenuOptionObject<T>, start?: number | undefined, end?: number | undefined) => MenuOptionObject<T>[]) | ((target: number, start: number, end?: number | undefined) => string[]) | ((target: number, start: number, end?: number | undefined) => MenuOptionObject<T>[]) | (<A, D extends number = 1>(this: A, depth?: D | undefined) => FlatArray<A, D>[]) | {
+} | (<A, D extends number = 1>(this: A, depth?: D | undefined) => FlatArray<A, D>[]) | ((...items: string[]) => number) | ((...items: MenuOptionObject<T>[]) => number) | ((compareFn?: ((a: string, b: string) => number) | undefined) => string[]) | ((compareFn?: ((a: MenuOptionObject<T>, b: MenuOptionObject<T>) => number) | undefined) => MenuOptionObject<T>[]) | ((value: string, start?: number | undefined, end?: number | undefined) => string[]) | ((value: MenuOptionObject<T>, start?: number | undefined, end?: number | undefined) => MenuOptionObject<T>[]) | ((target: number, start: number, end?: number | undefined) => string[]) | ((target: number, start: number, end?: number | undefined) => MenuOptionObject<T>[]) | {
     name: string;
     value: string;
 })[];
@@ -31,4 +31,3 @@ export declare const getComponentConfig: (type: string) => {
     component: JSX.Element;
     props?: object | undefined;
 };
-//# sourceMappingURL=Utils.d.ts.map

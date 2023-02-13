@@ -1,30 +1,25 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getComponentConfig = exports.setValue = exports.processFilesWithCallback = exports.getFieldError = exports.getMenuOptions = void 0;
-var lodash_1 = require("lodash");
-var getMenuOptions = function (options) {
-    return (0, lodash_1.map)(options, function (item) {
-        if ((0, lodash_1.isString)(item))
+import { map, isString, get } from "lodash";
+export const getMenuOptions = (options) => {
+    return map(options, (item) => {
+        if (isString(item))
             return { name: item, value: item };
         return item;
     });
 };
-exports.getMenuOptions = getMenuOptions;
-var getFieldError = function (fieldName, formikProps) {
-    var fieldError = (0, lodash_1.get)(formikProps, "errors.".concat(fieldName));
-    var isTouched = (0, lodash_1.get)(formikProps, "touched.".concat(fieldName));
+export const getFieldError = (fieldName, formikProps) => {
+    const fieldError = get(formikProps, `errors.${fieldName}`);
+    const isTouched = get(formikProps, `touched.${fieldName}`);
     if (!isTouched && formikProps.submitCount < 1)
         return "";
     return fieldError;
 };
-exports.getFieldError = getFieldError;
-var processFilesWithCallback = function (files, callback, readAs, encoding) {
-    var imgFiles = [];
-    var remFiles = [];
-    Array.from(files).forEach(function (file) {
-        var reader = new FileReader();
-        reader.onload = function () {
-            var fileInfo = {
+export const processFilesWithCallback = (files, callback, readAs, encoding) => {
+    const imgFiles = [];
+    const remFiles = [];
+    Array.from(files).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+            const fileInfo = {
                 name: file.name,
                 type: file.type,
                 size: Math.round(file.size / 1024) + " kB",
@@ -45,14 +40,11 @@ var processFilesWithCallback = function (files, callback, readAs, encoding) {
         // This works but remember only readAsText can take encoding as a parameter. Might want to mention this in the documentation.
     });
 };
-exports.processFilesWithCallback = processFilesWithCallback;
-var setValue = function (value, formikProps, fieldProps) {
-    formikProps.setFieldValue((0, lodash_1.get)(fieldProps, "name"), value);
+export const setValue = (value, formikProps, fieldProps) => {
+    formikProps.setFieldValue(get(fieldProps, "name"), value);
 };
-exports.setValue = setValue;
-var ComponentMapConfig = {};
-var getComponentConfig = function (type) {
+const ComponentMapConfig = {};
+export const getComponentConfig = (type) => {
     return ComponentMapConfig[type];
 };
-exports.getComponentConfig = getComponentConfig;
 //# sourceMappingURL=Utils.js.map

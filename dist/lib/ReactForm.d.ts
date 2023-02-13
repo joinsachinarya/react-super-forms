@@ -12,4 +12,3 @@ export interface ReactFormProps extends FormikConfig<any> {
 }
 export declare const ReactForm: React.FC<ReactFormProps>;
 export default ReactForm;
-//# sourceMappingURL=ReactForm.d.ts.map

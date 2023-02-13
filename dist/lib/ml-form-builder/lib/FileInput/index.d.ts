@@ -25,4 +25,3 @@ interface FileInputProps extends FieldProps {
 }
 export declare const FileInput: React.FC<FileInputProps>;
 export {};
-//# sourceMappingURL=index.d.ts.map

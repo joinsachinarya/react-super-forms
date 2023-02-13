@@ -10,4 +10,3 @@ interface CheckBoxProps extends FieldProps {
 }
 export declare const CheckBox: React.FC<CheckBoxProps>;
 export {};
-//# sourceMappingURL=index.d.ts.map
