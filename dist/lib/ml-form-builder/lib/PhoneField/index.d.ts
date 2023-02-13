@@ -1,5 +1,6 @@
 import React from "react";
 import { FieldItemProps, FieldProps } from "../Types";
+import "./styles.scss";
 import { CountryCodeFormat } from "../Constants/CountryList";
 export interface PhoneFieldProps extends FieldItemProps {
     countryCodeLabel?: string;

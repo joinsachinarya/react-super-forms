@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import React from "react";
-// import "./index.css";
+// import "./index.scss";
 import clsx from "clsx";
 import { HelperText } from "../HelperText";
 export const TextField = (props) => {

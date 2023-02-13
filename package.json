@@ -18,6 +18,10 @@
     "Yup",
     "clsx"
   ],
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+},
   "author": "sac6inarya",
   "license": "MIT",
   "repository": {
