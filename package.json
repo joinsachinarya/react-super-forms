@@ -1,6 +1,6 @@
 {
   "name": "rf-lib-test",
-  "version": "1.1.2",
+  "version": "1.1.4",
   "description": "react form library",
   "main": "dist/index.js",
   "module": "dist/index-a2c384ae.js",
