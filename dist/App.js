@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importDefault(require("react"));
-require("./App.css");
+// import "./App.css";
 var RegistrationForm_1 = __importDefault(require("./RegistrationForm"));
 var PlaceDetailsForm_1 = __importDefault(require("./PlaceDetailsForm"));
 function App() {

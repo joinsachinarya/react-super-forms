@@ -2,7 +2,7 @@ import React from "react";
 import {useState} from "react";
 // import "./index.css";
 import * as Yup from "yup";
-import ReactForm, { FormActionProps } from "../lib/ReactForm"
+import {ReactForm,  FormActionProps } from "../lib/ReactForm"
 
 
 const myActionConfig:FormActionProps = {

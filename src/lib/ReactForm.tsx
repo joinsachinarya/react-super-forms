@@ -46,4 +46,3 @@ export const ReactForm: React.FC<ReactFormProps> = (props) => {
      
   );
 };
-export default ReactForm;
