@@ -1,7 +1,36 @@
-import React, { useState } from "react";
-import "./index.css";
-import * as Yup from "yup";
-import ReactForm from "../lib/ReactForm";
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.RegistrationForm = void 0;
+var react_1 = __importStar(require("react"));
+// import "./index.css";
+var Yup = __importStar(require("yup"));
+var ReactForm_1 = __importDefault(require("../lib/ReactForm"));
 var myActionConfig = {
     submitButtonLayout: "fullWidth"
 };
@@ -147,8 +176,8 @@ var registrationConfig = [
         },
     },
 ];
-export var RegistrationForm = function () {
-    var _a = useState(false), loading = _a[0], setLoading = _a[1];
+var RegistrationForm = function () {
+    var _a = (0, react_1.useState)(false), loading = _a[0], setLoading = _a[1];
     var validation = Yup.object({
         fName: Yup.string().required("Required"),
         lName: Yup.string().required("Required"),
@@ -163,8 +192,8 @@ export var RegistrationForm = function () {
         submitQuestions: Yup.string().required("Required"),
         agreement: Yup.boolean().oneOf([true], 'Field must be checked').required("Required"),
     });
-    return (React.createElement("div", { className: "reg-form" },
-        React.createElement(ReactForm, { config: registrationConfig, formId: "1", initialValues: {}, isInProgress: loading, validationSchema: validation, 
+    return (react_1.default.createElement("div", { className: "reg-form" },
+        react_1.default.createElement(ReactForm_1.default, { config: registrationConfig, formId: "1", initialValues: {}, isInProgress: loading, validationSchema: validation, 
             // actionConfig={myActionConfig}
             onSubmit: function (values) {
                 setLoading(true);
@@ -172,5 +201,6 @@ export var RegistrationForm = function () {
                 setTimeout(function () { return setLoading(false); }, 200);
             } })));
 };
-export default RegistrationForm;
+exports.RegistrationForm = RegistrationForm;
+exports.default = exports.RegistrationForm;
 //# sourceMappingURL=index.js.map

@@ -1,7 +1,6 @@
 import { FormikProps } from "formik";
 import React from "react";
 import { FieldItemProps } from "./lib/Types";
-import "./index.css";
 import { TFieldConditions } from "./lib/ConditionalOperations";
 export interface ReadOnlyProps {
     renderer: (props: FieldProps) => React.ReactNode;

@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import { FieldProps } from "../../index";
 import { FieldItemProps } from "../Types";
 export interface FieldArrayProps extends FieldItemProps {

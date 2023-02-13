@@ -1,4 +1,7 @@
-export var COUNTRY_LIST = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.COUNTRY_LIST = void 0;
+exports.COUNTRY_LIST = [
     { name: "Afghanistan", dial_code: "+93", code: "AF" },
     { name: "Albania", dial_code: "+355", code: "AL" },
     { name: "Algeria", dial_code: "+213", code: "DZ" },

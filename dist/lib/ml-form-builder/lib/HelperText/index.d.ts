@@ -1,6 +1,5 @@
 import React from "react";
 import { FieldItemProps, FieldProps } from "../Types";
-import "./index.css";
 interface HelperText extends FieldProps {
     fieldProps?: FieldItemProps;
 }

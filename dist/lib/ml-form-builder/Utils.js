@@ -1,19 +1,24 @@
-import { map, isString, get } from "lodash";
-export var getMenuOptions = function (options) {
-    return map(options, function (item) {
-        if (isString(item))
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getComponentConfig = exports.setValue = exports.processFilesWithCallback = exports.getFieldError = exports.getMenuOptions = void 0;
+var lodash_1 = require("lodash");
+var getMenuOptions = function (options) {
+    return (0, lodash_1.map)(options, function (item) {
+        if ((0, lodash_1.isString)(item))
             return { name: item, value: item };
         return item;
     });
 };
-export var getFieldError = function (fieldName, formikProps) {
-    var fieldError = get(formikProps, "errors.".concat(fieldName));
-    var isTouched = get(formikProps, "touched.".concat(fieldName));
+exports.getMenuOptions = getMenuOptions;
+var getFieldError = function (fieldName, formikProps) {
+    var fieldError = (0, lodash_1.get)(formikProps, "errors.".concat(fieldName));
+    var isTouched = (0, lodash_1.get)(formikProps, "touched.".concat(fieldName));
     if (!isTouched && formikProps.submitCount < 1)
         return "";
     return fieldError;
 };
-export var processFilesWithCallback = function (files, callback, readAs, encoding) {
+exports.getFieldError = getFieldError;
+var processFilesWithCallback = function (files, callback, readAs, encoding) {
     var imgFiles = [];
     var remFiles = [];
     Array.from(files).forEach(function (file) {
@@ -40,11 +45,14 @@ export var processFilesWithCallback = function (files, callback, readAs, encodin
         // This works but remember only readAsText can take encoding as a parameter. Might want to mention this in the documentation.
     });
 };
-export var setValue = function (value, formikProps, fieldProps) {
-    formikProps.setFieldValue(get(fieldProps, "name"), value);
+exports.processFilesWithCallback = processFilesWithCallback;
+var setValue = function (value, formikProps, fieldProps) {
+    formikProps.setFieldValue((0, lodash_1.get)(fieldProps, "name"), value);
 };
+exports.setValue = setValue;
 var ComponentMapConfig = {};
-export var getComponentConfig = function (type) {
+var getComponentConfig = function (type) {
     return ComponentMapConfig[type];
 };
+exports.getComponentConfig = getComponentConfig;
 //# sourceMappingURL=Utils.js.map

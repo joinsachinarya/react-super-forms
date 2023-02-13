@@ -1,5 +1,4 @@
 import React from "react";
-import "./index.css";
 import { FieldItemProps, FieldProps, Option } from "../Types";
 export interface CheckboxFieldProps extends FieldItemProps {
     options?: Option[];
