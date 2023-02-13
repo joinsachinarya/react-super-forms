@@ -6,7 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
-    "module": "commonjs",
+    "module": "ES6",
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
