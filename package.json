@@ -35,12 +35,12 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
-    "eslint-config": "^0.3.0",
     "formik": "^2.2.9",
     "lodash": "^4.17.21",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "rf-lib-test": "^1.0.2",
     "sass": "^1.57.1",
     "yup": "^0.32.11"
   },
@@ -51,7 +51,6 @@
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "@typescript-eslint/parser": "^5.49.0",
     "@vitejs/plugin-react": "^3.0.0",
-    "eslint": "^8.32.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.1",

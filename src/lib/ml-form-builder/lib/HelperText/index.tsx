@@ -3,7 +3,7 @@ import { FormikProps } from "formik";
 import React from "react";
 import { FieldItemProps, FieldProps } from "../Types";
 import { getFieldError } from "../../Utils";
-import "./index.scss";
+import "./index.css";
 
 interface HelperText extends FieldProps {
   fieldProps?: FieldItemProps;

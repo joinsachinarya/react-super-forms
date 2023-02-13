@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.scss";
+import "./App.css";
 import RegistrationForm from "./RegistrationForm";
 import PlaceDetailsForm from "./PlaceDetailsForm";
 

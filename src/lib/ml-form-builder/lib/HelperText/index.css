@@ -1,0 +1,14 @@
+.helper-text, .error-text {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.error-text {
+  color: red;
+}
+
+.helper-text {
+  color: black;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,42 @@
+.reg-form {
+  margin-top: 100px;
+  padding: 24px 32px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 2px #9c4141;
+}
+.reg-form .text-label, .reg-form .radio-label, .reg-form .checkbox-label, .reg-form .switch-label, .reg-form .phone-field-label {
+  color: blue;
+}
+.reg-form .helper-text {
+  color: rgb(154, 25, 115);
+}
+.reg-form .input-box {
+  border-bottom: 1px solid rgb(198, 33, 33);
+  padding: 4px 4px;
+  margin-top: 6px;
+}
+.reg-form .phone-field-select {
+  border-bottom: 1px solid rgb(198, 33, 33);
+}
+.reg-form .phone-field-input {
+  border-bottom: 1px solid rgb(198, 33, 33);
+}
+.reg-form .fName, .reg-form .jobTitle {
+  width: 90%;
+}
+.reg-form .submit-btn {
+  background-color: rgb(60, 130, 243) !important;
+}
+
+.radio-container {
+  margin-top: 5px;
+}
+.radio-container .radio-name {
+  margin-top: 3px;
+}
+
+.checkbox-container {
+  margin-top: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */
