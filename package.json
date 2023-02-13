@@ -1,6 +1,6 @@
 {
   "name": "rf-lib-test",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "react form library",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -21,7 +21,7 @@
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
-},
+  },
   "author": "sac6inarya",
   "license": "MIT",
   "repository": {
