@@ -30,13 +30,15 @@
     "preview": "vite preview",
     "build": "tsc",
     "prebuild": "rimraf dist",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "build:css": "node-sass src/ -o dist/"
   },
   "dependencies": {
     "clsx": "^1.2.1",
     "eslint-config": "^0.3.0",
     "formik": "^2.2.9",
     "lodash": "^4.17.21",
+    "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1",
