@@ -1,4 +1,3 @@
-import { FormikValues } from "formik";
 import { FormConfig } from "../../index";
 export type TFieldConditions = {
     hidden?: boolean;
@@ -18,10 +17,10 @@ export interface IConditionalProps {
     finalProps?: object;
 }
 export declare const getConditionalProps: (itemConfig: FormConfig, formikProps: FormikValues) => {
-    finalProps: object | undefined;
+    finalProps: any;
     hidden?: undefined;
 } | {
-    finalProps: object | undefined;
+    finalProps: any;
     hidden: boolean;
 };
 export {};

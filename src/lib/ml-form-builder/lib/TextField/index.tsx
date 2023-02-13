@@ -1,6 +1,6 @@
 import { get } from "lodash";
 import React from "react";
-import "./index.css";
+// import "./index.css";
 import clsx from "clsx";
 import { FieldItemProps, FieldProps } from "../Types";
 import {HelperText} from "../HelperText";

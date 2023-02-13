@@ -1,4 +1,3 @@
-"use strict";
 var __assign = (this && this.__assign) || function () {
     __assign = Object.assign || function(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -46,22 +45,17 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ArrayField = void 0;
-var react_1 = __importDefault(require("react"));
-var lodash_1 = require("lodash");
-require("./index.css");
-var formik_1 = require("formik");
-var index_1 = require("../../index");
-var clsx_1 = __importDefault(require("clsx"));
-var ArrayField = function (props) {
+import React from "react";
+import { get } from "lodash";
+import "./index.css";
+import { FieldArray } from "formik";
+import { getComponentConfig } from "../../index";
+import clsx from "clsx";
+export var ArrayField = function (props) {
     var _a = props.fieldProps, fieldProps = _a === void 0 ? {} : _a, _b = props.formikProps, formikProps = _b === void 0 ? {} : _b;
     var _c = fieldProps.addButtonText, addButtonText = _c === void 0 ? "Add" : _c, label = fieldProps.label, _d = fieldProps.name, name = _d === void 0 ? "" : _d, itemType = fieldProps.itemType, addButton = fieldProps.addButton, removeButton = fieldProps.removeButton, onAddButtonClick = fieldProps.onAddButtonClick, onRemoveButtonClick = fieldProps.onRemoveButtonClick, _e = fieldProps.arrayItemFieldProps, arrayItemFieldProps = _e === void 0 ? {} : _e, _f = fieldProps.defaultItemValue, defaultItemValue = _f === void 0 ? "" : _f, classNames = fieldProps.classNames, nativeProps = fieldProps.nativeProps, disabled = fieldProps.disabled, fieldArrayLabel = fieldProps.fieldArrayLabel;
-    var values = (0, lodash_1.get)(formikProps, "values.".concat(name));
-    var itemComponentConfig = (0, index_1.getComponentConfig)(itemType);
+    var values = get(formikProps, "values.".concat(name));
+    var itemComponentConfig = getComponentConfig(itemType);
     var handleElementAdd = function (arrayHelpers) { return __awaiter(void 0, void 0, void 0, function () {
         var res;
         return __generator(this, function (_a) {
@@ -99,14 +93,13 @@ var ArrayField = function (props) {
             }
         });
     }); };
-    return (react_1.default.createElement("div", { className: (0, clsx_1.default)("array-field", classNames) },
-        fieldArrayLabel && react_1.default.createElement("label", { className: "field-array-container-label" }, fieldArrayLabel),
-        label && (react_1.default.createElement("label", { className: "field-array-label" }, label)),
-        react_1.default.createElement(formik_1.FieldArray, { name: name, render: function (arrayHelpers) { return (react_1.default.createElement("div", null,
-                (values || []).map(function (value, index) { return (react_1.default.createElement("div", { key: "".concat(fieldProps.name, "-").concat(index), className: "field-array-box" },
-                    react_1.default.cloneElement(itemComponentConfig.component, __assign(__assign({ name: fieldProps.name, key: "".concat(fieldProps.name, "-").concat(index), itemIndex: index, arrayHelpers: arrayHelpers, formikProps: formikProps, fieldProps: __assign(__assign({}, arrayItemFieldProps), { name: "".concat(name, "[").concat(index, "]") }) }, itemComponentConfig.props), nativeProps)),
-                    removeButton ? (removeButton) : (react_1.default.createElement("button", { className: "array-remove-icon", onClick: function () { return handleElementRemove(arrayHelpers, index); } }, react_1.default.createElement("p", { style: { fontSize: "8px" } }, "\u274C"))))); }),
-                addButton ? (addButton) : (react_1.default.createElement("button", { type: "button", className: "array-add-icon", onClick: function () { return handleElementAdd(arrayHelpers); } }, addButtonText)))); } })));
+    return (React.createElement("div", { className: clsx("array-field", classNames) },
+        fieldArrayLabel && React.createElement("label", { className: "field-array-container-label" }, fieldArrayLabel),
+        label && (React.createElement("label", { className: "field-array-label" }, label)),
+        React.createElement(FieldArray, { name: name, render: function (arrayHelpers) { return (React.createElement("div", null,
+                (values || []).map(function (value, index) { return (React.createElement("div", { key: "".concat(fieldProps.name, "-").concat(index), className: "field-array-box" },
+                    React.cloneElement(itemComponentConfig.component, __assign(__assign({ name: fieldProps.name, key: "".concat(fieldProps.name, "-").concat(index), itemIndex: index, arrayHelpers: arrayHelpers, formikProps: formikProps, fieldProps: __assign(__assign({}, arrayItemFieldProps), { name: "".concat(name, "[").concat(index, "]") }) }, itemComponentConfig.props), nativeProps)),
+                    removeButton ? (removeButton) : (React.createElement("button", { className: "array-remove-icon", onClick: function () { return handleElementRemove(arrayHelpers, index); } }, React.createElement("p", { style: { fontSize: "8px" } }, "\u274C"))))); }),
+                addButton ? (addButton) : (React.createElement("button", { type: "button", className: "array-add-icon", onClick: function () { return handleElementAdd(arrayHelpers); } }, addButtonText)))); } })));
 };
-exports.ArrayField = ArrayField;
 //# sourceMappingURL=index.js.map

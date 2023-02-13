@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.getConditionalProps = void 0;
-var lodash_1 = require("lodash");
+import { get, forEach, isEmpty } from "lodash";
 var compare = function (value1, operator, value2) {
     switch (operator) {
         case ">":
@@ -25,13 +22,13 @@ var compare = function (value1, operator, value2) {
     }
 };
 var getConditionalOutput = function (itemCondition, formikProps) {
-    var itemValue = (0, lodash_1.get)(formikProps, "values.".concat(itemCondition.key));
+    var itemValue = get(formikProps, "values.".concat(itemCondition.key));
     return compare(itemValue, itemCondition.operator, itemCondition.compareValue);
 };
 var hasTruthyValue = function (logicalOperation, values, formikProps) {
     if (logicalOperation === void 0) { logicalOperation = "AND"; }
     var outputResult = false;
-    (0, lodash_1.forEach)(values, function (item, index) {
+    forEach(values, function (item, index) {
         var result = getConditionalOutput(item, formikProps);
         if (logicalOperation === "AND" && !result) {
             outputResult = false;
@@ -48,9 +45,9 @@ var hasTruthyValue = function (logicalOperation, values, formikProps) {
     });
     return outputResult;
 };
-var getConditionalProps = function (itemConfig, formikProps) {
+export var getConditionalProps = function (itemConfig, formikProps) {
     var conditionInstructions = itemConfig.condition;
-    if (!conditionInstructions || (0, lodash_1.isEmpty)(conditionInstructions.values)) {
+    if (!conditionInstructions || isEmpty(conditionInstructions.values)) {
         return { finalProps: {} };
     }
     var isValidCondition = hasTruthyValue(conditionInstructions.logicOpn, conditionInstructions.values || [], formikProps);
@@ -68,5 +65,4 @@ var getConditionalProps = function (itemConfig, formikProps) {
             return { finalProps: conditionInstructions.defaultProps };
     }
 };
-exports.getConditionalProps = getConditionalProps;
 //# sourceMappingURL=index.js.map

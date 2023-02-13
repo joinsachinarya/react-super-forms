@@ -1,7 +1,7 @@
 import React from "react";
 import { FieldItemProps, FieldProps, Option } from "../Types";
 import { isString } from "lodash";
-import "./index.css";
+// import "./index.css";
 import { FormikProps } from "formik";
 import clsx from "clsx";
 import {HelperText} from "../HelperText";
