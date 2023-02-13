@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./index.css";
 import { FieldItemProps, FieldProps } from "../Types";
 export interface TextFieldProps extends FieldItemProps {
     type?: string;

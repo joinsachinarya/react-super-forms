@@ -53,7 +53,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ArrayField = void 0;
 var react_1 = __importDefault(require("react"));
 var lodash_1 = require("lodash");
-require("./styles.scss");
+require("./index.css");
 var formik_1 = require("formik");
 var index_1 = require("../../index");
 var clsx_1 = __importDefault(require("clsx"));

@@ -26,7 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SelectField = void 0;
 var react_1 = __importDefault(require("react"));
 var lodash_1 = require("lodash");
-require("./index.scss");
+require("./index.css");
 var clsx_1 = __importDefault(require("clsx"));
 var HelperText_1 = require("../HelperText");
 var SelectField = function (props) {

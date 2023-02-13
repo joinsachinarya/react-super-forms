@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import "./index.css";
 export declare const PlaceDetailsForm: React.FC;
 export default PlaceDetailsForm;
 //# sourceMappingURL=index.d.ts.map

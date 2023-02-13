@@ -28,7 +28,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.RegistrationForm = void 0;
 var react_1 = __importStar(require("react"));
-require("./index.scss");
+require("./index.css");
 var Yup = __importStar(require("yup"));
 var ReactForm_1 = __importDefault(require("../lib/ReactForm"));
 var myActionConfig = {

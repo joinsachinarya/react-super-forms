@@ -17,7 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.Radio = void 0;
 var lodash_1 = require("lodash");
 var react_1 = __importDefault(require("react"));
-require("./index.scss");
+require("./index.css");
 var clsx_1 = __importDefault(require("clsx"));
 var HelperText_1 = require("../HelperText");
 var Radio = function (props) {

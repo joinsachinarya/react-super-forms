@@ -29,7 +29,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlaceDetailsForm = void 0;
 var react_1 = __importDefault(require("react"));
 var react_2 = require("react");
-require("./index.scss");
+require("./index.css");
 var Yup = __importStar(require("yup"));
 var ReactForm_1 = __importDefault(require("../lib/ReactForm"));
 var myActionConfig = {

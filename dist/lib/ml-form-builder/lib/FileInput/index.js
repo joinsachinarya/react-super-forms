@@ -18,7 +18,7 @@ exports.FileInput = void 0;
 var react_1 = __importDefault(require("react"));
 var Utils_1 = require("../../Utils");
 var clsx_1 = __importDefault(require("clsx"));
-require("./index.scss");
+require("./index.css");
 var HelperText_1 = require("../HelperText");
 var FileInput = function (props) {
     var _a = props.formikProps, formikProps = _a === void 0 ? {} : _a, _b = props.fieldProps, fieldProps = _b === void 0 ? {} : _b;

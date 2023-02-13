@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.CheckBox = void 0;
 var react_1 = __importDefault(require("react"));
-require("./index.scss");
+require("./index.css");
 var lodash_1 = require("lodash");
 var clsx_1 = __importDefault(require("clsx"));
 var HelperText_1 = require("../HelperText");

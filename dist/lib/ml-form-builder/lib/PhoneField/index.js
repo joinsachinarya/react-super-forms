@@ -39,7 +39,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.PhoneField = void 0;
 var react_1 = __importStar(require("react"));
-require("./styles.scss");
+require("./index.scss");
 var CountryList_1 = require("../Constants/CountryList");
 var lodash_1 = require("lodash");
 var clsx_1 = __importDefault(require("clsx"));

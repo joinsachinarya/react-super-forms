@@ -49,7 +49,7 @@ var FileInput_1 = require("./lib/FileInput");
 var PhoneField_1 = require("./lib/PhoneField");
 var FieldArray_1 = require("./lib/FieldArray");
 var TextField_1 = require("./lib/TextField");
-require("./index.scss");
+require("./index.css");
 var ConditionalOperations_1 = require("./lib/ConditionalOperations");
 var ComponentMapConfig = {};
 var getComponentConfig = function (type) {
