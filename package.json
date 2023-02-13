@@ -3,9 +3,9 @@
   "version": "1.1.2",
   "description": "react form library",
   "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "module": "dist/index-a2c384ae.js",
   "types": "dist/index.d.ts",
-  "jsnext:main": "dist/index.es.js",
+  "jsnext:main": "dist/index-a2c384ae.js",
   "type": "module",
   "files": [
     "dist/**/*"
