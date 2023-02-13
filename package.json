@@ -1,12 +1,36 @@
 {
-  "name": "rflib",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "rf-lib-test",
+  "version": "1.0.0",
+  "description": "react form library",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "React",
+    "Formik",
+    "Lodash",
+    "Sass",
+    "Yup",
+    "clsx"
+  ],
+  "author": "sac6inarya",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sac6inarya/rf-lib-testing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sac6inarya/rf-lib-testing/issues"
+  },
+  "homepage": "https://github.com/sac6inarya/rf-lib-testing#readme",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build": "tsc",
+    "prebuild": "rimraf dist",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "clsx": "^1.2.1",
