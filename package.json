@@ -1,7 +1,7 @@
 {
   "name": "rf-lib-test",
-  "version": "2.0.2",
-  "description": "react form library",
+  "version": "2.1.0",
+  "description": "react forms library",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -22,7 +22,7 @@
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "author": "Mithyalabs Team",
+  "author": "sac6inarya",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c",
