@@ -1,6 +1,6 @@
 {
-  "name": "rf-lib-test",
-  "version": "2.0.0",
+  "name": "react-forms-lite",
+  "version": "1.1.5",
   "description": "react form library",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -22,8 +22,16 @@
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "author": "sac6inarya",
+  "author": "Mithyalabs Team",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mithya-team/react-forms-lite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mithya-team/react-forms-lite/issues"
+  },
+  "homepage": "https://github.com/mithya-team/react-forms-lite#readme",
   "scripts": {
     "build": "rollup -c",
     "test": "jest"
@@ -41,6 +49,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^4.0.3",
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",

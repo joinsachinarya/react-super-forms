@@ -3,7 +3,18 @@ import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import sass from 'rollup-plugin-sass';
+import alias from "@rollup/plugin-alias";
 import pkg from "./package.json" assert {type:"json"};
+
+const aliasConfig = {
+    entries: [
+      {
+        find: '~react-forms-lite',
+        replacement: 'react-forms-lite/dist',
+      },
+    ],
+  };
+  
 
 export default {
     input: "src/index.ts",
@@ -22,21 +33,21 @@ export default {
         },
     ],
     plugins: [
+        commonjs({
+            include: ["node_modules/**"],           
+        }),
         external(),
         sass({
             input: 'src/**/*.module.scss',
-            output:"dist/bundle.css"
-        }), 
-        resolve({
-            browser: true
+            output:"dist/index.css"
         }),
         typescript({
             exclude: "**/__tests__/**",
             clean: true
         }),
-        commonjs({
-            include: ["node_modules/**"],           
+        alias(aliasConfig),
+        resolve({
+            browser: true
         }),
-
     ]
 };

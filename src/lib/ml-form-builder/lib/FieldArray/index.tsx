@@ -2,9 +2,10 @@ import React from "react";
 import { get } from "lodash";
 import "./index.module.scss";
 import { FieldArray, FieldArrayRenderProps, FormikProps } from "formik";
-import { FieldProps, getComponentConfig } from "../../index";
+// import { FieldProps } from "../../index";
+import {getComponentConfig} from "../../Utils";
 import clsx from "clsx";
-import { FieldItemProps } from "../Types";
+import { FieldItemProps, FieldProps } from "../Types";
 
 export interface FieldArrayProps extends FieldItemProps {
   itemType: string;

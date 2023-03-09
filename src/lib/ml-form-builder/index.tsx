@@ -2,21 +2,26 @@ import clsx from "clsx";
 import { FormikProps } from "formik";
 import { get, isArray, isFunction, map, uniqueId } from "lodash";
 import React, { useEffect, useState } from "react";
-import {CheckBox} from "./lib/CheckBox";
-import {Radio} from "./lib/Radio";
-import {SelectField} from "./lib/SelectField";
-import {Switch} from "./lib/Switch";
-import {FileInput} from "./lib/FileInput";
-import {PhoneField} from "./lib/PhoneField";
-import {ArrayField} from "./lib/FieldArray";
-import {TextField} from "./lib/TextField";
-import { FieldItemProps } from "./lib/Types";
+import {
+  CheckBox ,
+  Radio, 
+  SelectField, 
+  Switch, 
+  FileInput, 
+  PhoneField, 
+  ArrayField, 
+  TextField, 
+  PlainText,
+  TextArea,
+} from "./lib";
+import { FieldItemProps, FieldProps, } from "./lib/Types";
 import "./index.module.scss";
 
 import {
   getConditionalProps,
   TFieldConditions,
 } from "./lib/ConditionalOperations";
+
 export interface ReadOnlyProps {
   renderer: (props: FieldProps) => React.ReactNode;
 }
@@ -67,19 +72,15 @@ export interface BuilderProps<T = any> {
   isInProgress?: boolean;
 }
 
-export interface FieldProps<T = any> {
-  formikProps?: FormikProps<T>;
-  fieldConfig?: FormConfig;
-  isReadOnly?: boolean;
-}
+// export interface FieldProps<T = any> {
+//   formikProps?: FormikProps<T>;
+//   fieldConfig?: FormConfig;
+//   isReadOnly?: boolean;
+// }
 
 const ComponentMapConfig: {
   [key: string]: { component: JSX.Element; props?: object };
 } = {};
-
-export const getComponentConfig = (type: string) => {
-  return ComponentMapConfig[type];
-};
 
 export const attachField = (
   type: Array<string> | string,
@@ -110,7 +111,7 @@ export const setDefaultProps = (
     };
 };
 
-attachField("select", <SelectField />,);
+attachField("select", <SelectField />);
 attachField("checkbox", <CheckBox />);
 attachField("switch", <Switch />);
 attachField("radio", <Radio />);
@@ -119,6 +120,8 @@ attachField("phone", <PhoneField />);
 attachField("array", <ArrayField />);
 attachField("password", <TextField />, { type: "password" });
 attachField("text", <TextField />, { type: "text" });
+attachField("plaintext",<PlainText/>);
+attachField("textarea", <TextArea/>);
 
 export const BuildFormRow: React.FC<FormRowProps> = (props) => {
   const {
@@ -183,8 +186,8 @@ export const BuildFormRow: React.FC<FormRowProps> = (props) => {
             isFunction(item.readOnlyProps.renderer)
               ? item.readOnlyProps.renderer({
                   formikProps,
-                  fieldConfig: item,
-                  isReadOnly: settings.isReadOnly,
+                  // fieldConfig: item,
+                  // isReadOnly: settings.isReadOnly,
                 })
               : React.cloneElement(Component, {
                   fieldProps,
@@ -266,12 +269,7 @@ export const MLFormAction: React.FC<
             <div className="loader"></div>
           ) : (
             <button
-              className={clsx(
-                "submit-btn",
-                layoutClassName === "action-fullWidth"
-                  ? "action-fullWidth"
-                  : undefined
-              )}
+              className={clsx( "submit-btn", layoutClassName )}
               type="submit"
               disabled={formikProps.isSubmitting}
             >
