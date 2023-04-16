@@ -1,1 +1,1 @@
-# react-forms-lite
+# react-forms-package
