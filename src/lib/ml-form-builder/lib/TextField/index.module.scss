@@ -1,0 +1,26 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.text-field {
+     @include mixins.componentField;
+}
+
+.text-label {
+    @include mixins.componentLabel;
+}
+
+.input-box {
+    @extend %input-select-box;
+}
+
+.text-field-box {
+    width: 100%;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}

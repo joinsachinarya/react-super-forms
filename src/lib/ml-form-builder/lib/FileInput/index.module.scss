@@ -1,0 +1,31 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.file-input-field {
+   @include mixins.componentField;
+}
+
+.file-input-label {
+  @include mixins.componentLabel;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.btn {
+  @extend %btn;
+  padding: 5px 8px 5px 8px;
+  font-size: 14px;
+  cursor: auto;
+}

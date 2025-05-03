@@ -1,0 +1,18 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.textarea-field {
+     @include mixins.componentField;
+}
+
+.textarea-label {
+    @include mixins.componentLabel;
+}
+
+.textarea-box {
+    @extend %textarea-box;
+}
+
+.textarea-field-box {
+    width: 100%;
+}

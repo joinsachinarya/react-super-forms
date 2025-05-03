@@ -1,0 +1,30 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.phone-field {
+     @include mixins.componentField;
+}
+
+.phone-field-label {
+    @include mixins.componentLabel;
+}
+
+.phone-field-container {
+    display: flex;
+}
+
+.phone-field-box {
+    width: auto
+}
+
+.phone-field-select {
+    @extend %input-select-box;
+    height: 30px;
+}
+
+.phone-field-input {
+    @extend %input-select-box;
+    margin-left: 5px;
+    height: 30px;
+    ;
+}

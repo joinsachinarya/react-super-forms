@@ -1,0 +1,22 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.checkbox-field {
+    @include mixins.componentField;
+}
+
+.checkbox-label {
+    @include mixins.componentLabel;
+}
+
+.isColumn {
+    @include mixins.isColumn;
+}
+
+.checkbox-container {
+    display: flex;
+}
+
+.checkbox-name {
+    margin: 3px 3px 0px 0px;
+}

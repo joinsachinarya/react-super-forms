@@ -1,0 +1,18 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.range-field {
+     @include mixins.componentField;
+}
+
+.range-label {
+    @include mixins.componentLabel;
+}
+
+.input-box {
+    @extend %input-select-box;
+}
+
+.range-field-box {
+    width: 100%;
+}

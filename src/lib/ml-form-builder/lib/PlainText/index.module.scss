@@ -1,0 +1,6 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.plain-text-field {
+     @include mixins.componentField;
+}

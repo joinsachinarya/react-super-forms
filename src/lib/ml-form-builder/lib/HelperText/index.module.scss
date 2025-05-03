@@ -1,0 +1,12 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.error-text {
+    color: red;
+    @extend %helper-error-text-size-opacity;
+}
+
+.helper-text {
+    color: black;
+    @extend %helper-error-text-size-opacity;
+}

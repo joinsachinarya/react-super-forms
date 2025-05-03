@@ -1,0 +1,18 @@
+@use "../../Styles/extends";
+@use "../../Styles/mixins";
+
+.radio-field {
+     @include mixins.componentField;
+}
+
+.radio-label {
+    @include mixins.componentLabel;
+}
+
+.isColumn {
+    @include mixins.isColumn;
+}
+
+.radio-name {
+    margin: 3px 3px 0px 0px;
+}
